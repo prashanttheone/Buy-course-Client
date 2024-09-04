@@ -39,7 +39,7 @@ function Checkout() {
      
       console.log("Payload data being sent:", payload);
       // Create order on your server
-      const response = await axios.post('http://localhost:5000/api/create-order', payload);
+      const response = await axios.post('https://course-server-five.vercel.app/api/create-order', payload);
       const { paymentToken, sessionId } = response.data;
       console.log("Session ID received:", sessionId);
 
